@@ -62,7 +62,7 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         {isOpen && (
-          <div className="md:hidden bg-white w-full text-lg font-medium space-y-4 px-4 py-4 flex flex-col items-start">
+          <div className="md:hidden bg-white w-full text-lg font-medium space-y-4 px-10 py-4 flex flex-col items-start">
             <Link
               to="home"
               smooth={true}

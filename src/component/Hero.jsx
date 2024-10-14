@@ -3,18 +3,16 @@ import { ReactTyped } from "react-typed";
 
 const Hero = () => {
   return (
-    <section className="text-white flex flex-col min-h-screen md:flex-row items-center justify-center md:justify-between px-8 md:px-24 sm:py-12">
+    <section className="text-white flex flex-col-reverse min-h-screen md:flex-row items-center justify-center md:justify-between px-4 sm:px-8 md:px-24 py-8">
       {/* Left Side: Title and CTA */}
-      <div className="container flex flex-col text-center md:text-left md:w-1/2">
-        <h1 className="font-jost text-3xl text-primary mb-5 md:text-2xl font-semibold sm:mt-20">
+      <div className="container flex flex-col text-center md:text-left md:w-1/2 space-y-5">
+        <h1 className="font-jost text-2xl sm:text-3xl text-primary font-semibold">
           Hello, I{"'"}m
         </h1>
-        <h1 className="">
-          <span className="text-black font-poppins text-5xl font-semibold">
-            Manojkumar Dalal
-          </span>
+        <h1 className="text-black font-poppins text-4xl sm:text-5xl font-semibold">
+          Manojkumar Dalal
         </h1>
-        <div className="text-4xl mt-4 text-black font-medium">
+        <div className="text-2xl sm:text-4xl mt-4 text-black font-medium">
           I am{" "}
           <span className="font-semibold text-primary">
             <ReactTyped
@@ -29,11 +27,11 @@ const Hero = () => {
             />
           </span>
         </div>
-        <p className="text-gray-600 text-lg text-justify md:text-xl w-full mt-7 sm:text-start">
+        <p className="text-gray-600 text-base sm:text-lg md:text-xl w-full mt-7 sm:text-start">
           Passionate about building responsive, scalable, and efficient web
           applications using modern JavaScript frameworks.
         </p>
-        <div className="flex items-center mt-[60px] space-x-4">
+        <div className="flex items-center justify-center md:justify-start mt-6 sm:mt-10 space-x-4">
           <a href="#contact">
             <button className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-all">
               Hire Me
@@ -76,17 +74,13 @@ const Hero = () => {
       </div>
 
       {/* Right Side: Image */}
-      <div className="mt-10 md:mt-0 md:w-1/2">
-        <div className="flex items-center justify-center">
-          <img
-            src="../ManojDalal.jpg"
-            alt="Developer Illustration"
-            className="w-[400px] h-[400px] object-cover rounded-full shadow-lg shadow-white"
-          />
-        </div>
-        
+      <div className="w-full md:w-1/2 flex justify-center mb-8 md:mb-0">
+        <img
+          src="../ManojDalal.jpg"
+          alt="Developer Illustration"
+          className="w-56 h-56 sm:w-72 sm:h-72 md:w-[400px] md:h-[400px] object-cover rounded-full shadow-lg shadow-white"
+        />
       </div>
-      
     </section>
   );
 };
