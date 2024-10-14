@@ -3,6 +3,8 @@ import Title from "./ui/Title";
 import { FaAddressCard } from "react-icons/fa";
 import { MdMarkEmailUnread, MdContactPhone } from "react-icons/md";
 import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify"; // Import ToastContainer and toast
+import "react-toastify/dist/ReactToastify.css"; // Import styles
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,12 +16,10 @@ const Contact = () => {
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
-    console.log(formData);
   };
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(formData);
     emailjs
       .send(
         "service_x2mn7uk", // Replace with your service ID
@@ -29,7 +29,8 @@ const Contact = () => {
       )
       .then((response) => {
         console.log("Email sent successfully!", response.status, response.text);
-        // Optionally, reset form fields
+        toast.success("Email sent successfully!"); // Show success toast
+        // Reset form fields
         setFormData({
           name: "",
           email: "",
@@ -38,11 +39,13 @@ const Contact = () => {
       })
       .catch((err) => {
         console.error("Failed to send email. Error:", err);
+        toast.error("Failed to send email. Please try again."); // Show error toast
       });
   };
 
   return (
     <section id="contact" className="py-16">
+      <ToastContainer /> {/* Add ToastContainer here */}
       <div className="container mx-auto px-6 space-y-8">
         <div className="text-center space-y-6">
           <Title title="Contact Me" />
@@ -105,7 +108,7 @@ const Contact = () => {
                 />
                 <input
                   type="email"
-                  name="email" // Added name attribute
+                  name="email"
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="Your Email"
@@ -115,7 +118,7 @@ const Contact = () => {
               </div>
 
               <textarea
-                name="message" // Added name attribute
+                name="message"
                 placeholder="Write your message here"
                 value={formData.message}
                 onChange={handleChange}
