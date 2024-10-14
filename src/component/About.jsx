@@ -62,10 +62,10 @@ const About = () => {
           
           {/* Action Buttons */}
           <div className="w-full flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8">
-            <a href="#contact" className="bg-primary text-white py-2 px-6 rounded-md shadow hover:bg-orange-600 transition">
+            <a href="#contact" className="bg-primary text-white py-2 px-6 rounded-md shadow hover:bg-orange-500 text-center transition">
               Hire Me
             </a>
-            <button className="bg-gray-700 text-white py-2 px-6 rounded-md shadow hover:bg-gray-900 transition">
+            <button className="bg-gray-700 text-white py-2 px-6 rounded-md shadow text-center hover:bg-gray-900 transition">
               Download CV
             </button>
           </div>

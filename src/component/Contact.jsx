@@ -43,7 +43,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-16">
-      <div className="container mx-auto px-6 space-y-2">
+      <div className="container mx-auto px-6 space-y-8">
         <div className="text-center space-y-6">
           <Title title="Contact Me" />
           <div className="space-y-1">
@@ -58,7 +58,7 @@ const Contact = () => {
 
         <div className="flex flex-col md:flex-row md:justify-between items-center gap-10">
           {/* Left Section: Contact Info */}
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-6 w-full md:w-1/3">
             <div className="flex items-center">
               <span className="bg-orange-100 p-3 rounded-full text-orange-500">
                 <FaAddressCard size={40} />
@@ -113,7 +113,7 @@ const Contact = () => {
                   required
                 />
               </div>
-              
+
               <textarea
                 name="message" // Added name attribute
                 placeholder="Write your message here"
