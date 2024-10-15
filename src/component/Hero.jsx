@@ -12,7 +12,7 @@ const Hero = () => {
         <h1 className="text-black font-poppins text-4xl sm:text-5xl font-semibold">
           Manojkumar Dalal
         </h1>
-        <div className="text-2xl sm:text-4xl mt-4 text-black font-medium">
+        <div className="text-xl sm:text-3xl mt-4 text-black font-medium">
           I am{" "}
           <span className="font-semibold text-primary">
             <ReactTyped
@@ -78,7 +78,7 @@ const Hero = () => {
         <img
           src="../ManojDalal.jpg"
           alt="Developer Illustration"
-          className="w-40 h-40 sm:w-56 sm:h-56 md:w-[400px] md:h-[400px] object-cover rounded-full shadow-lg shadow-white"
+          className="w-32 rounded-full shadow-lg border-r-8 border-orange-500 md:w-3/4 sm:mt-16"
         />
       </div>
     </section>

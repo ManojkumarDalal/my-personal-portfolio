@@ -64,7 +64,7 @@ const Contact = () => {
           <div className="flex flex-col space-y-6 w-full md:w-1/3">
             <div className="flex items-center">
               <span className="bg-orange-100 p-3 rounded-full text-orange-500">
-                <FaAddressCard size={40} />
+                <FaAddressCard size={30} />
               </span>
               <div className="ml-4">
                 <h4 className="font-bold text-gray-800">Address</h4>
@@ -74,7 +74,7 @@ const Contact = () => {
 
             <div className="flex items-center">
               <span className="bg-green-100 p-3 rounded-full text-green-500">
-                <MdMarkEmailUnread size={40} />
+                <MdMarkEmailUnread size={30} />
               </span>
               <div className="ml-4">
                 <h4 className="font-bold text-gray-800">Email</h4>
@@ -84,7 +84,7 @@ const Contact = () => {
 
             <div className="flex items-center">
               <span className="bg-purple-100 p-3 rounded-full text-purple-500">
-                <MdContactPhone size={40} />
+                <MdContactPhone size={30} />
               </span>
               <div className="ml-4">
                 <h4 className="font-bold text-gray-800">Phone</h4>

@@ -12,6 +12,7 @@ const projects = [
     description:
       "The Fashion eCommerce Application is a fully responsive online store designed for selling men's, women's, and kids' fashion products.",
     link: "https://your-ecommerce-app.com",
+    codeLink: "",
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ const projects = [
     image: "../project2.PNG",
     description:
       "The Personal Portfolio Website is a modern, responsive, and visually appealing platform designed to showcase my skills, experiences & projects.",
-    link: "https://your-portfolio.com",
+    link: "https://manojkumardalal.netlify.app/",
+    codeLink:"https://github.com/ManojkumarDalal/my-personal-portfolio",
   },
   {
     id: 3,
@@ -27,7 +29,8 @@ const projects = [
     image: "../project3.PNG",
     description:
       "Designed and developed an interactive and visually appealing landing page for an online fresh fruit store.",
-    link: "https://your-chat-app.com",
+    link: "https://main--freshfruitsapp.netlify.app/",
+    codeLink: "https://github.com/ManojkumarDalal/fresh-fruits-app"
   },
 ];
 
@@ -89,13 +92,15 @@ const Projects = () => {
                 </div>
                 <div className="w-full flex justify-around">
                   <a
-                    href={project.link}
+                    href={project.codeLink}
+                    target="_blank"
                     className="px-4 py-2 border border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition"
                   >
                     View Code
                   </a>
                   <a
                     href={project.link}
+                    target="_blank"
                     className="px-4 py-2 border border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition"
                   >
                     Live Preview
