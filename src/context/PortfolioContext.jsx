@@ -22,7 +22,7 @@ export const PortfolioProvider = ({ children }) => {
   // Portfolio Data
   const [portfolioData, setPortfolioData] = useState({
     user: {
-      name: "Manojkumar Ganesh Dalal",
+      name: "Manojkumar Dalal",
       dob: "16-Feb-1987",
       nationality: "Indian",
       title: ["Frontend Developer", "React Developer", "Software Trainer"],

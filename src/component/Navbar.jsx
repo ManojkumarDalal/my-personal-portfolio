@@ -13,7 +13,8 @@ const Navbar = () => {
   return (
     <header>
       {/* Main navigation container */}
-      <nav className="bg-white fixed top-0 w-full z-10 shadow-md"> {/* Sticky and z-index added */}
+      <nav className="bg-white fixed top-0 w-full z-10 shadow-md">
+        {/* Sticky and z-index added */}
         <div className="container mx-auto flex items-center justify-between h-16 px-4">
           {/* Logo Section */}
           <div className="flex items-center justify-center gap-3">
@@ -24,33 +25,78 @@ const Navbar = () => {
           </div>
 
           {/* Links for large screens */}
-          <div className="hidden md:flex items-center space-x-8 text-lg font-medium">
-            <Link to="home" smooth={true} offset={-80} duration={500} className="cursor-pointer text-primary hover:text-primary">
+          <div className="hidden md:flex items-center space-x-6 text-lg font-medium">
+            <Link
+              to="home"
+              smooth={true}
+              offset={-80}
+              duration={500}
+              className="cursor-pointer text-primary hover:text-primary"
+            >
               Home
             </Link>
-            <Link to="about" smooth={true} offset={-80} duration={500} className="cursor-pointer hover:text-primary">
+            <Link
+              to="about"
+              smooth={true}
+              offset={-80}
+              duration={500}
+              className="cursor-pointer hover:text-primary"
+            >
               About
             </Link>
-            <Link to="skills" smooth={true} offset={-80} duration={500} className="cursor-pointer hover:text-primary">
+            <Link
+              to="skills"
+              smooth={true}
+              offset={-80}
+              duration={500}
+              className="cursor-pointer hover:text-primary"
+            >
               Skills
             </Link>
-            <Link to="services" smooth={true} offset={-80} duration={500} className="cursor-pointer hover:text-primary">
+            <Link
+              to="services"
+              smooth={true}
+              offset={-80}
+              duration={500}
+              className="cursor-pointer hover:text-primary"
+            >
               Services
             </Link>
-            <Link to="projects" smooth={true} offset={-80} duration={500} className="cursor-pointer hover:text-primary">
+            <Link
+              to="projects"
+              smooth={true}
+              offset={-80}
+              duration={500}
+              className="cursor-pointer hover:text-primary"
+            >
               Projects
             </Link>
-            <Link to="blogs" smooth={true} offset={-80} duration={500} className="cursor-pointer hover:text-primary">
+            <Link
+              to="blogs"
+              smooth={true}
+              offset={-80}
+              duration={500}
+              className="cursor-pointer hover:text-primary"
+            >
               Blogs
             </Link>
-            <Link to="contact" smooth={true} offset={-80} duration={500} className="cursor-pointer hover:text-primary">
+            <Link
+              to="contact"
+              smooth={true}
+              offset={-80}
+              duration={500}
+              className="cursor-pointer hover:text-primary"
+            >
               Contact
             </Link>
           </div>
 
           {/* Hamburger Menu for small screens */}
           <div className="md:hidden">
-            <button onClick={toggleMenu} className="text-primary focus:outline-none">
+            <button
+              onClick={toggleMenu}
+              className="text-primary focus:outline-none"
+            >
               {isOpen ? (
                 <FaTimes size={28} /> // Close icon when menu is open
               ) : (
@@ -59,7 +105,6 @@ const Navbar = () => {
             </button>
           </div>
         </div>
-
         {/* Mobile menu */}
         {isOpen && (
           <div className="md:hidden bg-white w-full text-lg font-medium space-y-4 px-10 py-4 flex flex-col items-start">
