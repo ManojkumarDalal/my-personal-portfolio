@@ -1,12 +1,16 @@
-import { useState } from "react";
-import Title from "./ui/Title";
+import { useContext, useState } from "react";
+import Title from "./commonUI/Title";
 import { FaAddressCard } from "react-icons/fa";
 import { MdMarkEmailUnread, MdContactPhone } from "react-icons/md";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify"; // Import ToastContainer and toast
 import "react-toastify/dist/ReactToastify.css"; // Import styles
+import { PortfolioContext } from "../context/PortfolioContext";
 
 const Contact = () => {
+  
+  const { portfolioData } = useContext(PortfolioContext);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -46,7 +50,7 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16">
       <ToastContainer /> {/* Add ToastContainer here */}
-      <div className="container mx-auto px-6 space-y-8">
+      <div className="container mx-auto px-6 space-y-2">
         <div className="text-center space-y-6">
           <Title title="Contact Me" />
           <div className="space-y-1">
@@ -68,7 +72,7 @@ const Contact = () => {
               </span>
               <div className="ml-4">
                 <h4 className="font-bold text-gray-800">Address</h4>
-                <p className="text-gray-600">Nashik, Maharashtra, India</p>
+                <p className="text-gray-600">{portfolioData.user.contact.address}</p>
               </div>
             </div>
 
@@ -78,7 +82,7 @@ const Contact = () => {
               </span>
               <div className="ml-4">
                 <h4 className="font-bold text-gray-800">Email</h4>
-                <p className="text-gray-600">rajhansmanoj77@gmail.com</p>
+                <p className="text-gray-600">{portfolioData.user.contact.email}</p>
               </div>
             </div>
 
@@ -88,13 +92,13 @@ const Contact = () => {
               </span>
               <div className="ml-4">
                 <h4 className="font-bold text-gray-800">Phone</h4>
-                <p className="text-gray-600">+91 8308341531</p>
+                <p className="text-gray-600">{portfolioData.user.contact.phone}</p>
               </div>
             </div>
           </div>
 
           {/* Right Section: Contact Form */}
-          <div className="w-full md:w-2/3 bg-white shadow-lg rounded-lg p-8">
+          <div className="w-full md:w-2/3 bg-white shadow-2xl rounded-lg p-8">
             <form onSubmit={sendEmail}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <input

@@ -1,4 +1,4 @@
-import propTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 const Title = ({ title }) => {
   return (
@@ -15,7 +15,7 @@ const Title = ({ title }) => {
 };
 
 Title.propTypes = {
-  title: propTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Title;

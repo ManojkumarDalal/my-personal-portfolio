@@ -1,6 +1,10 @@
-import Title from "./ui/Title";
+import { useContext } from "react";
+import HireMeButton from "./commonUI/HireMeButton";
+import Title from "./commonUI/Title";
+import { PortfolioContext } from "../context/PortfolioContext";
 
 const About = () => {
+  const { portfolioData } = useContext(PortfolioContext);
   return (
     <section id="about" className="mx-auto bg-secondary py-16 sm:p-6">
       <div className="container flex flex-col md:flex-row items-center justify-between gap-16">
@@ -14,7 +18,7 @@ const About = () => {
         </div>
 
         {/* About Text Section */}
-        <div className="w-full md:w-2/3 flex flex-col items-center md:items-start justify-center space-y-5">
+        <div className="w-full md:w-2/3 flex flex-col items-center md:items-start justify-center space-y-3">
           <Title title="About Me" />
           
           {/* First paragraph */}
@@ -33,38 +37,36 @@ const About = () => {
           </p>
           
           {/* Personal Info Section */}
-          <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="w-full grid grid-cols-1 sm:grid-cols-2 gap-1">
             <div>
               <p className="font-bold">Name:</p>
-              <p>Manojkumar Ganesh Dalal</p>
+              <p>{portfolioData.user.name}</p>
             </div>
             <div>
               <p className="font-bold">Email:</p>
-              <p>rajhansmanoj77@gmail.com</p>
+              <p>{portfolioData.user.contact.email}</p>
             </div>
             <div>
               <p className="font-bold">Mobile:</p>
-              <p>+91 8308341531</p>
+              <p>{portfolioData.user.contact.phone}</p>
             </div>
             <div>
               <p className="font-bold">Date of Birth:</p>
-              <p>16-Feb-1987</p>
+              <p>{portfolioData.user.dob}</p>
             </div>
             <div>
               <p className="font-bold">Nationality:</p>
-              <p>Indian</p>
+              <p>{portfolioData.user.nationality}</p>
             </div>
             <div>
               <p className="font-bold">Address:</p>
-              <p>Nashik, Maharashtra, India.</p>
+              <p>{portfolioData.user.contact.address}</p>
             </div>
           </div>
           
           {/* Action Buttons */}
           <div className="w-full flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-8">
-            <a href="#contact" className="bg-primary text-white py-2 px-6 rounded-md shadow hover:bg-orange-500 text-center transition">
-              Hire Me
-            </a>
+            <HireMeButton title="Hire Me" link="#contact" />
             <button className="bg-gray-700 text-white py-2 px-6 rounded-md shadow text-center hover:bg-gray-900 transition">
               Download CV
             </button>

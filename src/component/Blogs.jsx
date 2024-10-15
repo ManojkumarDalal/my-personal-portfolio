@@ -1,12 +1,12 @@
-import TabsWithBlogs from './TabsWithBlogs';
-import Title from './ui/Title';
+import Tabs from './commonUI/Tabs';
+import Title from './commonUI/Title';
 
 const Blogs = () => {
   return (
     <section id="blogs" className='mx-auto py-16 bg-secondary'>
-        <div className='container'>
+        <div className='container space-y-8'>
             <Title title="My Blogs" />
-            <TabsWithBlogs />
+            <Tabs />
         </div>
     </section>
   )

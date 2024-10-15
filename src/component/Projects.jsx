@@ -1,39 +1,10 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Title from "./ui/Title";
-import Button from "./ui/Button";
-
-// Project Data
-const projects = [
-  {
-    id: 1,
-    title: "E-Commerce Application",
-    image: "../project1.PNG",
-    description:
-      "The Fashion eCommerce Application is a fully responsive online store designed for selling men's, women's, and kids' fashion products.",
-    link: "https://your-ecommerce-app.com",
-    codeLink: "",
-  },
-  {
-    id: 2,
-    title: "Personal Portfolio",
-    image: "../project2.PNG",
-    description:
-      "The Personal Portfolio Website is a modern, responsive, and visually appealing platform designed to showcase my skills, experiences & projects.",
-    link: "https://manojkumardalal.netlify.app/",
-    codeLink:"https://github.com/ManojkumarDalal/my-personal-portfolio",
-  },
-  {
-    id: 3,
-    title: "Fresh Fruit Store",
-    image: "../project3.PNG",
-    description:
-      "Designed and developed an interactive and visually appealing landing page for an online fresh fruit store.",
-    link: "https://main--freshfruitsapp.netlify.app/",
-    codeLink: "https://github.com/ManojkumarDalal/fresh-fruits-app"
-  },
-];
+import Title from "./commonUI/Title";
+import ProjectCart from "./commonUI/ProjectCart";
+import { useContext } from "react";
+import { PortfolioContext } from "../context/PortfolioContext";
 
 const Projects = () => {
   // Slick slider settings
@@ -65,6 +36,8 @@ const Projects = () => {
     ],
   };
 
+  const { portfolioData } = useContext(PortfolioContext);
+
   return (
     <section id="projects" className="py-16">
       <div className="container mx-auto space-y-6 px-4">
@@ -73,30 +46,15 @@ const Projects = () => {
 
         {/* Project Carousel */}
         <Slider {...settings}>
-          {projects.map((project) => (
-            <div key={project.id} className="px-6 py-2">
-              {" "}
-              {/* Added padding for spacing */}
-              <div className="w-full max-w-sm h-[450px] p-6 bg-secondary rounded-lg shadow-2xl flex flex-col items-center justify-around space-y-4">
-                <h1 className="text-xl font-medium text-primary font-jost">
-                  {project.title}
-                </h1>
-                <figure className="w-full">
-                  <img
-                    src={project.image}
-                    alt="Project screenshot"
-                    className="border border-cyan-500 rounded-lg w-full object-cover"
-                  />
-                </figure>
-                <div>
-                  <p className="text-md text-justify">{project.description}</p>
-                </div>
-                <div className="w-full flex justify-around">
-                  <Button title="View Code" link={project.codeLink}/>
-                  <Button title="Live View" link={project.link}/>
-                </div>
-              </div>
-            </div>
+          {portfolioData.projects.map((project) => (
+            <ProjectCart
+              key={project.id}
+              title={project.title}
+              image={project.image}
+              description={project.description}
+              codeLink={project.codeLink}
+              link={project.link}
+            />
           ))}
         </Slider>
       </div>
