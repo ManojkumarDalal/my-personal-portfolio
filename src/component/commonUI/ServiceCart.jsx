@@ -16,7 +16,7 @@ const ServiceCart = ({ icon, title, description }) => {
 };
 
 ServiceCart.propTypes = {
-    icon: PropTypes.elementType.isRequired,
+    icon: PropTypes.element.isRequired,
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
 }

@@ -12,8 +12,7 @@ const SkillCart = ({ icon, text }) => {
 };
 
 SkillCart.propTypes = {
-  id: PropTypes.number.isRequired,
-  icon: PropTypes.elementType.isRequired,
+  icon: PropTypes.element.isRequired,
   text: PropTypes.string.isRequired,
 };
 
