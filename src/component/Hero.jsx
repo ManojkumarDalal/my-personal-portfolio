@@ -10,7 +10,7 @@ const Hero = () => {
     <section className="text-white flex flex-col-reverse min-h-screen md:flex-row items-center justify-center md:justify-between px-4 sm:px-8 md:px-24 py-8">
       {/* Left Side: Title and CTA */}
       <div className="container flex flex-col text-center md:text-left md:w-1/2 space-y-5">
-        <h1 className="font-jost text-2xl sm:text-3xl text-primary font-semibold">
+        <h1 className="font-jost text-2xl sm:text-xl text-primary font-semibold">
           Hello, I{"'"}m
         </h1>
         <h1 className="text-black font-poppins text-4xl sm:text-5xl font-semibold">
