@@ -1,5 +1,6 @@
 import { FaLinkedin, FaGithub, FaMedium, FaYoutube } from "react-icons/fa";
 import { ReactTyped } from "react-typed";
+import Button from "./ui/Button";
 
 const Hero = () => {
   return (
@@ -32,11 +33,7 @@ const Hero = () => {
           applications using modern JavaScript frameworks.
         </p>
         <div className="flex items-center justify-center md:justify-start mt-6 sm:mt-10 space-x-4">
-          <a href="#contact">
-            <button className="bg-primary text-white px-6 py-2 rounded-lg hover:bg-orange-600 transition-all">
-              Hire Me
-            </button>
-          </a>
+          <Button title="Hire Me" link="#contact"/>
           {/* Social Media Icons */}
           <a
             href="https://www.linkedin.com/in/manojkumar-dalal-431aa615b"

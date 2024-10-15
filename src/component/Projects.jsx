@@ -2,6 +2,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Title from "./ui/Title";
+import Button from "./ui/Button";
 
 // Project Data
 const projects = [
@@ -91,20 +92,8 @@ const Projects = () => {
                   <p className="text-md text-justify">{project.description}</p>
                 </div>
                 <div className="w-full flex justify-around">
-                  <a
-                    href={project.codeLink}
-                    target="_blank"
-                    className="px-4 py-2 border border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition"
-                  >
-                    View Code
-                  </a>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    className="px-4 py-2 border border-primary text-primary font-semibold rounded-full hover:bg-primary hover:text-white transition"
-                  >
-                    Live Preview
-                  </a>
+                  <Button title="View Code" link={project.codeLink}/>
+                  <Button title="Live View" link={project.link}/>
                 </div>
               </div>
             </div>
